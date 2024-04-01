@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+.card-container {
+  width: 300px; /* Ancho de la tarjeta */
+  height: 400px; /* Alto de la tarjeta */
+  perspective: 1000px; /* Perspectiva para efecto 3D */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform-style: preserve-3d; /* Preservar transformaciones 3D */
+  transition: transform 0.5s; /* Transición suave para el efecto */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.05); /* Color de sombra */
+  border-radius: 15px; /* Borde redondeado */
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra detrás de la tarjeta */
+  transform: translateZ(-40px); /* Desplazamiento en el eje Z para efecto de duplicado */
+}
+
+
+
+
+
+</style></head>
+
+<body>
+  <div class="card-container">
+    <div class="card">
+      <!-- Contenido de la tarjeta -->
+    </div>
+  </div>
+  
+</body>
+</html>

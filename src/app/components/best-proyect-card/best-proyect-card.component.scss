@@ -1,0 +1,132 @@
+
+.slider-proyect{
+    max-width: 1024px;
+    margin: 12px;
+   
+    //height: 100%;
+    //position: relative;
+    transition-property: transform;
+    
+    display: flex;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    //background-color: #262A2D!important;
+    justify-content: center;
+    .proyect{
+        background-color: rgb(32 32 32)!important;
+        display: flex;
+        //align-items: center;
+        flex-direction: row;
+        overflow: hidden;
+        background-color: #d3d3d3; /* Cambia el color según sea necesario */
+        border-radius: 3rem; /* Ajusta el radio de la esquina según sea necesario */
+        padding: 1.9rem; /* Ajusta el relleno según sea necesario */
+        gap: 2rem; /* Ajusta el espacio entre elementos según sea necesario */
+        justify-content: space-between;
+        .description{
+            width: 50%; //o 100%
+            display: grid;
+            gap: 3rem;
+            .corp{
+                display: flex;
+                flex-direction: column;
+                //align-items: center;
+                //justify-content: center;
+                .categories-container{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-right: 0.5rem; /* Ajusta según sea necesario */
+                    margin-bottom: 1.5rem; /* Ajusta según sea necesario */
+
+                    span{
+                        display: inline-block;
+                        padding: 2px 10px;
+                        font-size: 0.875rem;
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: rgb(161 161 161);
+                        color: rgb(161 161 161);
+                        line-height: 20px;
+                        border-radius: 9999px;
+                        margin: 0 3px 5px 3px;
+                    }
+                }
+                .title{
+                    font-weight: 900;
+                    font-size: 1.5rem;
+                    line-height: 32px;
+                    margin-bottom: 1.25rem;
+                    font-family: 'Inter', sans-serif;
+                }
+                .description-parrafo{
+                    color: rgb(161 161 161);
+                    font-size: 1.125rem;
+                    line-height: 28px;
+                    overflow: hidden;
+                }
+            }
+            .type-time{
+                display: flex;
+                flex-direction: row;
+                gap: 2.5rem;
+                .industria,.year{
+                    width: 50%;
+                    font-size: 1.125rem;
+                    line-height: 28px;
+                    span:nth-child(1){
+                        display: block; 
+                        color: rgb(161 161 161);
+                        margin-bottom: .25rem;
+                    }
+                    span:nth-child(2){
+                        display: block; 
+                        color: rgb(255 255 255);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .image{
+            width: 50%;
+            display: block;
+            position: relative;
+            background-color: rgb(43 43 43 );
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            img{
+                opacity: 1;
+                transition: opacity 500ms ease 0s;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                max-height: none;
+                object-fit: cover;
+                object-position: center center;
+                //display: block;
+                
+            }
+        }
+    }
+    @media (max-width: 1024px){
+        .proyect{
+            flex-direction: column;
+            .description{
+                width: 100%;
+            }
+            .image{
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+        }
+    }
+}

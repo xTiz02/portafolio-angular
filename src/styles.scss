@@ -1,1 +1,164 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+/* For use in src/lib/core/theming/_palette.scss */
+/* For use in src/lib/core/theming/_palette.scss */
+/* For use in src/lib/core/theming/_palette.scss */
+$md-test1: (
+    50 : #e4e4e5,
+    100 : #bbbcbd,
+    200 : #8d8f91,
+    300 : #5f6265,
+    400 : #3d4144,
+    500 : #1b1f23,
+    600 : #181b1f,
+    700 : #14171a,
+    800 : #101215,
+    900 : #080a0c,
+    A100 : #52a8ff,
+    A200 : #1f8fff,
+    A400 : #0075eb,
+    A700 : #0069d1,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-test2: (
+    50 : #fdf5ef,
+    100 : #fbe6d8,
+    200 : #f8d6be,
+    300 : #f5c5a3,
+    400 : #f3b890,
+    500 : #f1ac7c,
+    600 : #efa574,
+    700 : #ed9b69,
+    800 : #eb925f,
+    900 : #e7824c,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffe7da,
+    A700 : #ffd6c1,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-test3: (
+    50 : #fef4f3,
+    100 : #fbe4e2,
+    200 : #f9d3cf,
+    300 : #f7c1bb,
+    400 : #f5b3ad,
+    500 : #f3a69e,
+    600 : #f19e96,
+    700 : #ef958c,
+    800 : #ed8b82,
+    900 : #ea7b70,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fffdfd,
+    A700 : #ffe6e4,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+
+
+
+$portafolio-angular-primary: mat.define-palette($md-test1);
+$portafolio-angular-accent: mat.define-palette($md-test2);
+
+// The warn palette is optional (defaults to red).
+$portafolio-angular-warn: mat.define-palette($md-test3);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$portafolio-angular-theme: mat.define-dark-theme((
+  color: (
+    primary: $portafolio-angular-primary,
+    accent: $portafolio-angular-accent,
+    warn: $portafolio-angular-warn,
+  ),
+  typography: mat.define-typography-config(
+    $font-family: "Roboto, sans-serif",
+  ),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($portafolio-angular-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+html{
+    background-color: #262A2D;
+    //color de letras 
+    color: #C4C7C6;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: #8e8e8e #fff;
+    scrollbar-width: thin;
+
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
