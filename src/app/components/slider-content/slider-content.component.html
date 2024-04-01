@@ -13,7 +13,7 @@
       <app-best-proyect-card class="product-box-prueba"></app-best-proyect-card>
     </ng-template>
   }
-  @if (type === "normal") {
+  @if (type === "normal" || type == undefined) {
     <ng-template carouselSlide class="products-wrapper-prueba">
       <app-proyect-card class="product-box-prueba"></app-proyect-card>
     </ng-template>
