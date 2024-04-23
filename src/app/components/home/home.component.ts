@@ -35,7 +35,7 @@ export class HomeComponent {
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    navSpeed: 9000,
+    navSpeed: 6000,
     autoplay: true,
     //autoplayTimeout: 3000,
     responsive: {

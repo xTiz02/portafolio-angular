@@ -569,5 +569,11 @@ mat-sidenav {
             font-size: 1.125rem;
             line-height: 1.75rem;
         }
+        @media screen and (max-width: 400px) {
+            h3,p{
+                font-size: 0.9rem;
+
+            }
+        }
     }
 }
