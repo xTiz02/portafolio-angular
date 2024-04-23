@@ -312,7 +312,11 @@ mat-sidenav {
     }
 }
 
-
+@media screen and (max-width: 400px){
+    .sobre-mi-container{
+        padding: 1rem 32px !important;
+    }
+}
 
 
 
